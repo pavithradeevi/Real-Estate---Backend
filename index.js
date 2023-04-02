@@ -21,6 +21,10 @@ app.use("/auth", authController);
 app.use("/property", propertyController);
 app.use('/upload', uploadController)
 
+app.get('/',(req,res)=>{
+    console.log("welcome to our room booking website!")
+})
+
 // starting server
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("Server has been started"));
